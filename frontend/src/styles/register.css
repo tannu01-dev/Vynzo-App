@@ -1,0 +1,481 @@
+.register-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(124, 58, 237, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(37, 99, 235, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(236, 72, 153, 0.3),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5f3ff,
+      #e0e7ff,
+      #fae8ff
+    );
+}
+
+.register-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  border-radius: 50%;
+
+  top: -170px;
+  left: -120px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.25),
+      rgba(236, 72, 153, 0.2)
+    );
+
+  filter: blur(5px);
+}
+
+.register-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  right: -110px;
+  bottom: -150px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.25),
+      rgba(192, 38, 211, 0.2)
+    );
+
+  filter: blur(5px);
+}
+
+.register-card {
+  width: 440px;
+
+  padding: 38px 42px;
+
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 30px 80px rgba(76, 29, 149, 0.2);
+
+  position: relative;
+
+  z-index: 5;
+
+  animation: registerAppear 0.6s ease;
+}
+
+@keyframes registerAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+.register-logo {
+  text-align: center;
+
+  font-size: 26px;
+
+  font-weight: 900;
+
+  letter-spacing: 5px;
+
+  color: #111827;
+
+  margin-bottom: 18px;
+}
+.register-card h1 {
+  text-align: center;
+
+  font-size: 27px;
+
+  color: #111827;
+
+  margin-bottom: 7px;
+}
+
+.register-subtitle {
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.register-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.register-form label {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #374151;
+
+  margin-bottom: -5px;
+}
+
+.register-form input {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 14px;
+
+  border-radius: 11px;
+
+  border: 1px solid rgba(156, 163, 175, 0.35);
+
+  background: rgba(255, 255, 255, 0.65);
+
+  color: #111827;
+
+  outline: none;
+
+  font-size: 12px;
+
+  transition: 0.3s;
+}
+
+.register-form input::placeholder {
+  color: #9ca3af;
+}
+
+.register-form input:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.register-form input:focus {
+  background: white;
+
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+.register-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.register-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.register-password {
+  position: relative;
+}
+
+.register-password input {
+  padding-right: 48px;
+}
+
+.password-info {
+  font-size: 9px;
+
+  color: #9ca3af;
+
+  margin-top: -4px;
+}
+.register-terms {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin-top: 4px;
+}
+
+.register-terms input {
+  width: 14px;
+
+  height: 14px;
+
+  margin-top: 1px;
+
+  accent-color: #7c3aed;
+
+  cursor: pointer;
+}
+
+.register-terms label {
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  color: #6b7280;
+
+  cursor: pointer;
+}
+
+.register-terms a {
+  color: #7c3aed;
+
+  font-weight: 600;
+}
+
+
+.register-button {
+  width: 100%;
+
+  height: 49px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  margin-top: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #6366f1,
+      #ec4899
+    );
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px rgba(124, 58, 237, 0.25);
+
+  transition: 0.3s;
+}
+
+.register-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 17px 32px rgba(124, 58, 237, 0.35);
+}
+
+.register-button:active {
+  transform: scale(0.98);
+}
+
+.register-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.register-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 20px 0;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+.register-divider::before,
+.register-divider::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    rgba(107, 114, 128, 0.2);
+}
+
+.register-login {
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  margin-top: 17px;
+}
+
+.register-login a {
+  color: #7c3aed;
+
+  font-weight: 700;
+
+  margin-left: 4px;
+
+  transition: 0.3s;
+}
+
+.register-login a:hover {
+  color: #ec4899;
+}
+
+.register-back {
+  position: absolute;
+
+  top: 25px;
+
+  left: 30px;
+
+  z-index: 10;
+
+  color: #4b5563;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.register-back:hover {
+  color: #7c3aed;
+
+  transform: translateX(-3px);
+}
+
+.register-error {
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  background: rgba(239, 68, 68, 0.08);
+
+  border: 1px solid rgba(239, 68, 68, 0.15);
+
+  color: #dc2626;
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+.register-success {
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  border: 1px solid rgba(34, 197, 94, 0.15);
+
+  color: #16a34a;
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+@media (max-width: 550px) {
+
+  .register-page {
+    padding: 20px;
+  }
+
+  .register-card {
+    width: 100%;
+
+    padding: 30px 23px;
+
+    border-radius: 22px;
+  }
+
+  .register-logo {
+    font-size: 23px;
+  }
+
+  .register-card h1 {
+    font-size: 24px;
+  }
+
+  .register-subtitle {
+    font-size: 11px;
+  }
+
+  .register-row {
+    grid-template-columns: 1fr;
+  }
+
+  .register-back {
+    top: 18px;
+
+    left: 20px;
+  }
+}
+
